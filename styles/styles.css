@@ -1,11 +1,30 @@
 html {
   font-family: Bebas Neue;
+  /* background-color: var(--body-color); */
 }
 
 :root {
   --color-header: #000000;
-  --border-color: 2px solid #a7a7a7;
+  --border-color: 2px solid #ffffff;
   --text-color-header: #ffffff;
+  --body-color: #adadad;
+  --color-main: #000000;
+  --text-color-main: #ffffff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 1000;
+}
+
+h2 {
+  display: block;
+  height: 51px;
+  font-size: 50px;
+  text-align: center;
+  margin: 200px 20px 20px 20px;
 }
 
 #logo {
@@ -13,10 +32,14 @@ html {
   animation: logo-anime 3s;
 }
 
+.main-flex {
+  display: flex;
+  justify-content: center;
+}
+
 .flexbox-container {
   display: flex;
   background-color: var(--color-header);
-  width: 100%;
   height: 150px;
   align-items: center;
   justify-content: center;
@@ -65,6 +88,44 @@ html {
   animation: nav-anime 3s;
 }
 
+.cont-container {
+  display: flex;
+  background-color: var(--color-main);
+  height: 550px;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  color: var(--text-color-main);
+}
+
+.cont-element {
+  height: 70%;
+  border: var(--border-color);
+  margin: 10px;
+  flex-grow: 1;
+}
+
+.cont-element.svyat {
+  overflow: hidden;
+  width: 30%;
+}
+
+.cont-element.text {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  font-size: 25px;
+  padding: 15px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.photo {
+  width: 400px;
+  animation: blur-photo 3s;
+}
+
 @keyframes logo-anime {
   0% {
     transform: translateX(150%);
@@ -72,7 +133,7 @@ html {
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateX(-0%);
     opacity: 1;
   }
 }
@@ -98,5 +159,15 @@ html {
   100% {
     transform: translateX(0%);
     opacity: 1;
+  }
+}
+
+@keyframes blur-photo {
+  0% {
+    filter:blur(10px);
+  }
+
+  100% {
+    filter:blur(0px);
   }
 }
