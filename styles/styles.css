@@ -25,6 +25,7 @@ h2 {
   font-size: 50px;
   text-align: center;
   margin: 200px 20px 20px 20px;
+  animation: text-reveal-bottom 3s;
 }
 
 #logo {
@@ -64,11 +65,12 @@ h2 {
 }
 
 .flexbox-element.title {
+  /* margin-top: 70px; */
   width: 60%;
   color: var(--text-color-header);
   justify-content: center;
   letter-spacing: 0.5rem;
-  font-size: 120px;
+  font-size: 100px;
   animation: title-anime 3s;
 }
 
@@ -107,8 +109,9 @@ h2 {
 }
 
 .cont-element.svyat {
+  margin-left: 5%;
   overflow: hidden;
-  width: 30%;
+  width: 25%;
 }
 
 .cont-element.text {
@@ -124,6 +127,28 @@ h2 {
 .photo {
   width: 400px;
   animation: blur-photo 3s;
+}
+
+.huy {
+  animation: text-reveal 3s;
+}
+
+.huy1 {
+  opacity: 0;
+  animation: text-reveal 3s 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.huy2 {
+  opacity: 0;
+  animation: text-reveal 3s 1s;
+  animation-fill-mode: forwards;
+}
+
+.huy3 {
+  opacity: 0;
+  animation: text-reveal 3s 1.5s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes logo-anime {
@@ -169,5 +194,29 @@ h2 {
 
   100% {
     filter:blur(0px);
+  }
+}
+
+@keyframes text-reveal {
+  0% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes text-reveal-bottom {
+  0% {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }
