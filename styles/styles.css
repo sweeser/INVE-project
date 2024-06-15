@@ -1,0 +1,102 @@
+html {
+  font-family: Bebas Neue;
+}
+
+:root {
+  --color-header: #000000;
+  --border-color: 2px solid #a7a7a7;
+  --text-color-header: #ffffff;
+}
+
+#logo {
+  height: 100px;
+  animation: logo-anime 3s;
+}
+
+.flexbox-container {
+  display: flex;
+  background-color: var(--color-header);
+  width: 100%;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.flexbox-element {
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+  height: 70%;
+  margin: 10px;
+  box-sizing: border-box;
+  /* border: var(--border-color); */
+  color: var(--text-color-header);
+  
+}
+
+.flexbox-element.logo {
+  width: 20%;
+  justify-content: flex-start;
+}
+
+.flexbox-element.title {
+  width: 60%;
+  color: var(--text-color-header);
+  justify-content: center;
+  letter-spacing: 0.5rem;
+  font-size: 120px;
+  animation: title-anime 3s;
+}
+
+.flexbox-element.navigation {
+  justify-content: center;
+  flex-direction: row;
+  width: 20%;
+  text-align: center;
+}
+
+.nav-button {
+  width: 33%;
+  text-decoration: none;
+  color: var(--text-color-header);
+  font-size: 20px;
+  margin: 10px;
+  animation: nav-anime 3s;
+}
+
+@keyframes logo-anime {
+  0% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes title-anime {
+  0% {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes nav-anime {
+  0% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
