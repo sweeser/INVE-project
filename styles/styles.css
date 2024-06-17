@@ -27,6 +27,7 @@ h2 {
   font-size: 50px;
   text-align: center;
   animation: text-reveal-bottom 3s;
+  margin: 20px;
 }
 
 #logo {
@@ -35,7 +36,7 @@ h2 {
 }
 
 main {
-  margin-top: 180px;
+  margin-top: 170px;
 }
 
 .main-flex {
@@ -110,13 +111,12 @@ main {
 
 .cont-element {
   height: 70%;
-  border: var(--border-color);
   margin: 10px;
   flex-grow: 1;
 }
 
 .cont-element.svyat {
-  margin-left: 5%;
+  margin-left: 10px;
   overflow: hidden;
   width: 25%;
 }
@@ -134,6 +134,7 @@ main {
 .photo {
   width: 400px;
   animation: blur-photo 3s;
+  
 }
 
 .huy {
@@ -163,6 +164,79 @@ main {
   border-radius: 8px;
   transition: background-color 0.5s 0.1s;
   transition: border-radius 0.5s;
+}
+
+.ds-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.ds-container {
+  display: flex;
+  background-color: var(--color-main);
+  height: 430px;
+  width: 58%;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  color: var(--text-color-main);
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+}
+
+.ds-element {
+  display: flex;
+  height: 90%;
+  margin: 10px;
+  flex-grow: 1;
+  /* border: var(--border-color); */
+}
+
+.ds-element.dslogo {
+  margin-left: 10px;
+  overflow: hidden;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  animation: logo-reveal 3s;
+  z-index: 200;
+}
+
+.ds-element.dstext {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  font-size: 25px;
+  padding: 15px;
+  box-sizing: border-box;
+  justify-content: center;
+  animation: ds-reveal 3s;
+  z-index: 100;
+}
+
+.dsphoto {
+  width: 375px;
+  /* animation: blur-photo 3s; */
+}
+
+footer {
+  display: flex;
+  background-color: var(--color-header);
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.smth-container {
+  flex-grow: 1;
 }
 
 @keyframes logo-anime {
@@ -225,12 +299,46 @@ main {
 
 @keyframes text-reveal-bottom {
   0% {
-    transform: translateY(-150%);
+    /* transform: translateY(-150%); */
     opacity: 0;
   }
 
   100% {
-    transform: translateY(0%);
+    /* transform: translateY(0%); */
+    opacity: 1;
+  }
+}
+
+@keyframes ds-reveal {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+
+  65% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes logo-reveal {
+  0% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(60%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0%);
     opacity: 1;
   }
 }
