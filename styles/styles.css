@@ -26,13 +26,16 @@ h2 {
   height: 51px;
   font-size: 50px;
   text-align: center;
-  margin: 200px 20px 20px 20px;
   animation: text-reveal-bottom 3s;
 }
 
 #logo {
   height: 100px;
   animation: logo-anime 3s;
+}
+
+main {
+  margin-top: 180px;
 }
 
 .main-flex {
