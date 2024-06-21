@@ -1,14 +1,14 @@
 html {
   font-family: Bebas Neue;
-  /* background-color: var(--body-color); */
   scroll-behavior: smooth;
   scrollbar-width: none;
+  color: var(--text-color);
 }
 
 :root {
   --color-header: #000000;
   --border-color: 2px solid #ffffff;
-  --text-color-header: #ffffff;
+  --text-color: #ffffff;
   --body-color: #adadad;
   --color-main: #000000;
   --text-color-main: #ffffff;
@@ -28,6 +28,7 @@ h2 {
   text-align: center;
   animation: text-reveal-bottom 3s;
   margin: 20px;
+  color: var(--color-main);
 }
 
 #logo {
@@ -39,194 +40,35 @@ main {
   margin-top: 170px;
 }
 
-.main-flex {
+.main-flex, .ds-flex {
   display: flex;
   justify-content: center;
 }
 
-.flexbox-container {
+.flexbox-container, .cont-container, .ds-container {
   display: flex;
-  background-color: var(--color-header);
-  height: 150px;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row nowrap;
-}
-
-.flexbox-element {
-  display: flex;
-  align-items: center;
-  min-width: 100px;
-  height: 70%;
-  margin: 20px;
-  box-sizing: border-box;
-  /* border: var(--border-color); */
-  color: var(--text-color-header);
-  
-}
-
-.flexbox-element.logo {
-  width: 20%;
-  justify-content: flex-start;
-}
-
-.flexbox-element.title {
-  /* margin-top: 70px; */
-  width: 60%;
-  color: var(--text-color-header);
-  justify-content: center;
-  letter-spacing: 0.5rem;
-  font-size: 100px;
-  animation: title-anime 3s;
-}
-
-.flexbox-element.navigation {
-  justify-content: center;
-  flex-direction: row;
-  width: 20%;
-  text-align: center;
-}
-
-.nav-button {
-  width: 33%;
-  text-decoration: none;
-  color: var(--text-color-header);
-  font-size: 20px;
-  margin: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-  animation: nav-anime 3s;
-}
-
-.cont-container {
-  display: flex;
-  background-color: var(--color-main);
-  height: 550px;
-  width: 70%;
   align-items: center;
   justify-content: center;
   flex-flow: row nowrap;
   color: var(--text-color-main);
-}
-
-.cont-element {
-  height: 70%;
-  margin: 10px;
-  flex-grow: 1;
-}
-
-.cont-element.svyat {
-  margin-left: 10px;
-  overflow: hidden;
-  width: 25%;
-}
-
-.cont-element.text {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  font-size: 25px;
-  padding: 15px;
-  box-sizing: border-box;
-  justify-content: center;
-}
-
-.photo {
-  width: 400px;
-  animation: blur-photo 3s;
-  
-}
-
-.huy {
-  animation: text-reveal 3s;
-}
-
-.huy1 {
-  opacity: 0;
-  animation: text-reveal 3s 0.5s;
-  animation-fill-mode: forwards;
-}
-
-.huy2 {
-  opacity: 0;
-  animation: text-reveal 3s 1s;
-  animation-fill-mode: forwards;
-}
-
-.huy3 {
-  opacity: 0;
-  animation: text-reveal 3s 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.nav-button:hover {
-  background-color: #adadad;
-  border-radius: 8px;
-  transition: background-color 0.5s 0.1s;
-  transition: border-radius 0.5s;
-}
-
-.ds-flex {
-  display: flex;
-  justify-content: center;
+  background-color: var(--color-main);
 }
 
 .ds-container {
-  display: flex;
-  background-color: var(--color-main);
   height: 430px;
   width: 58%;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row nowrap;
-  color: var(--text-color-main);
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;
 }
 
-.ds-element {
-  display: flex;
-  height: 90%;
-  margin: 10px;
-  flex-grow: 1;
-  /* border: var(--border-color); */
+.cont-container {
+  height: 550px;
+  width: 70%;
 }
 
-.ds-element.dslogo {
-  margin-left: 10px;
-  overflow: hidden;
-  width: 40%;
-  justify-content: center;
-  align-items: center;
-  animation: logo-reveal 3s;
-  z-index: 200;
-}
-
-.ds-element.dstext {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  font-size: 25px;
-  padding: 15px;
-  box-sizing: border-box;
-  justify-content: center;
-  animation: ds-reveal 3s;
-  z-index: 100;
-}
-
-.dsphoto {
-  width: 375px;
-  /* animation: blur-photo 3s; */
-}
-
-footer {
-  display: flex;
-  background-color: var(--color-header);
+.flexbox-container {
   height: 150px;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row nowrap;
 }
 
 .contacts-container {
@@ -238,6 +80,155 @@ footer {
 .smth-container {
   flex-grow: 1;
 }
+
+.cont-element, .flexbox-element, .ds-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-element {
+  height: 70%;
+  margin: 10px;
+  flex-grow: 1;
+}
+
+.flexbox-element {
+  min-width: 100px;
+  height: 70%;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.ds-element {
+  height: 90%;
+  margin: 10px;
+  flex-grow: 1;
+}
+
+.logo {
+  width: 20%;
+  justify-content: flex-start;
+}
+
+.title {
+  width: 60%;
+  justify-content: center;
+  letter-spacing: 0.5rem;
+  font-size: 100px;
+  animation: title-anime 3s;
+}
+
+.navigation {
+  justify-content: center;
+  flex-direction: row;
+  width: 20%;
+  text-align: center;
+}
+
+.nav-button {
+  width: 33%;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  animation: nav-anime 3s;
+}
+
+.member-1, .member-2, .member-3, .member-4 {
+  overflow: hidden;
+  width: 25%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: blur-photo 3s;
+}
+
+.member-1 {
+  background-image: url(../img/photo_2024-05-28_21-05-57.jpg);
+}
+
+.member-2 {
+  background-image: url(../img/TkpHbpLKnls.jpg);
+}
+
+.member-3 {
+  background-image: url(../img/VOVA.jpg);
+}
+
+.member-4 {
+  background-image: url(../img/vallraven_by_delta.png);
+}
+
+.text, .dstext {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  padding: 15px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.text {
+  width: 70%;
+}
+
+.dstext {
+  width: 60%;
+  animation: ds-reveal 3s;
+}
+
+.line-1, .line-2, .line-3, .line-4 {
+  opacity: 0;
+}
+
+.line-1 {
+  animation: text-reveal 3s;
+  animation-fill-mode: forwards;
+}
+
+.line-2 {
+  animation: text-reveal 3s 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.line-3 {
+  animation: text-reveal 3s 1s;
+  animation-fill-mode: forwards;
+}
+
+.line-4 {
+  animation: text-reveal 3s 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.nav-button:hover {
+  background-color: #adadad;
+  border-radius: 8px;
+  transition: background-color 0.5s 0.1s;
+  transition: border-radius 0.5s;
+}
+
+.dslogo {
+  margin-left: 10px;
+  width: 40%;
+  animation: logo-reveal 3s;
+  background-image: url(../img/stov\ discord\ 3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+footer {
+  display: flex;
+  background-color: var(--color-header);
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+
 
 @keyframes logo-anime {
   0% {
@@ -299,12 +290,10 @@ footer {
 
 @keyframes text-reveal-bottom {
   0% {
-    /* transform: translateY(-150%); */
     opacity: 0;
   }
 
   100% {
-    /* transform: translateY(0%); */
     opacity: 1;
   }
 }
