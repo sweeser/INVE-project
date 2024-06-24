@@ -166,7 +166,7 @@ main {
   display: flex;
   flex-direction: column;
   font-size: 25px;
-  padding: 15px;
+  padding: 10px;
   box-sizing: border-box;
   justify-content: center;
 }
@@ -223,7 +223,7 @@ main {
 footer {
   display: flex;
   background-color: var(--color-header);
-  height: 150px;
+  height: 80px;
   align-items: center;
   justify-content: center;
   flex-flow: row nowrap;
