@@ -2,6 +2,7 @@ html {
   font-family: Bebas Neue;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  scroll-padding-top: 170px;
   color: var(--text-color);
 }
 
