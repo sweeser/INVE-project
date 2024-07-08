@@ -2,7 +2,7 @@ html {
   font-family: Bebas Neue;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  /* scroll-padding-top: 170px; */
+  scroll-padding-top: 170px;
   color: var(--text-color);
 }
 
@@ -60,196 +60,99 @@ html {
 }
 
 .main-navigation a:hover {
-  background-color: #adadad;
-  border-radius: 8px;
-  transition: background-color 0.5s 0.1s;
-  transition: border-radius 0.1s;
-}
-
-h2 {
-  height: 51px;
-  font-size: 50px;
-  text-align: center;
-  animation: text-reveal-bottom 3s;
-  margin: 20px;
-  color: var(--color-main);
+  text-decoration: underline;
+  text-decoration-color: rgb(225 12 133);
+  text-underline-offset: 3px;
+  text-underline-position: under;
+  transition: text-decoration 1s 1s; /*Спросить у Артема как это работает  */
+  transition: text-decoration-color 1s;
 }
 
 main {
   margin-top: 170px;
 }
 
-.main-flex, .ds-flex {
-  display: flex;
-  justify-content: center;
-}
-
-.flexbox-container, .cont-container, .ds-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row nowrap;
-  color: var(--text-color-main);
-  background-color: var(--color-main);
-}
-
-.ds-container {
-  height: 430px;
-  width: 58%;
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-  border-radius: 500px;
-}
-
-.cont-container {
-  height: 550px;
-  width: 70%;
-}
-
-.flexbox-container {
-  height: 150px;
-}
-
-.contacts-container {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
-}
-
-.smth-container {
-  flex-grow: 1;
-}
-
-.cont-element, .flexbox-element, .ds-element {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cont-element {
-  height: 70%;
-  margin: 10px;
-  flex-grow: 1;
-}
-
-.flexbox-element {
-  min-width: 100px;
-  height: 70%;
-  margin: 20px;
-  box-sizing: border-box;
-}
-
-.ds-element {
-  height: 90%;
-  margin: 10px;
-  flex-grow: 1;
-}
-
-.logo {
-  width: 20%;
-  justify-content: flex-start;
-}
-
-.title {
-  width: 60%;
-  justify-content: center;
-  letter-spacing: 0.5rem;
-  font-size: 100px;
-  animation: title-anime 3s;
-}
-
-.navigation {
-  justify-content: center;
-  flex-direction: row;
-  width: 20%;
+h2 {
+  font-size: 50px;
   text-align: center;
+  animation: text-reveal-bottom 3s;
+  color: var(--color-main);
 }
 
-
-
-.member-1, .member-2, .member-3, .member-4 {
-  overflow: hidden;
-  width: 25%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation: blur-photo 3s;
+.member-cards {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
 }
 
-.member-1 {
-  background-image: url(../img/member-1.jpg);
-}
-
-.member-2 {
-  background-image: url(../img/member-2.jpg);
-}
-
-.member-3 {
-  background-image: url(../img/member-3.jpg);
-}
-
-.member-4 {
-  background-image: url(../img/member-4.png);
-}
-
-.text, .dstext {
+.member-card {
   display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #000000;
+  height: 500px;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+
+.member-card img {
+  display: block;
+  max-height: 470px;
+  width: auto;
+}
+
+.member-description {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.member-description p {
+  margin-bottom: 30px;
+}
+
+.member-description p:last-child {
+  margin-bottom: 0;
+}
+
+.discord-rules {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #000000;
+}
+
+.discord-rules h3 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.discord-rules-list {
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   font-size: 25px;
-  padding: 10px;
-  box-sizing: border-box;
-  justify-content: center;
+  list-style-type: disc;
 }
 
-.text {
-  width: 70%;
+.discord-rules-list li::marker {
+	color: rgb(225 12 133);
+	font-size: 35px;
 }
 
-.dstext {
-  width: 60%;
-  animation: ds-reveal 3s;
+.rule {
+  margin-bottom: 15px;
+  margin-left: 30px;
 }
 
-.line-1, .line-2, .line-3, .line-4 {
-  opacity: 0;
+.rule:last-child  {
+  margin-bottom: 15px;
 }
 
-.line-1 {
-  animation: text-reveal 3s;
-  animation-fill-mode: forwards;
-}
 
-.line-2 {
-  animation: text-reveal 3s 0.5s;
-  animation-fill-mode: forwards;
-}
-
-.line-3 {
-  animation: text-reveal 3s 1s;
-  animation-fill-mode: forwards;
-}
-
-.line-4 {
-  animation: text-reveal 3s 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.dslogo {
-  margin-left: 10px;
-  width: 40%;
-  animation: logo-reveal 3s;
-  background-image: url(../img/logo.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-footer {
-  display: flex;
-  background-color: var(--color-header);
-  height: 80px;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row nowrap;
-}
 
 @keyframes logo-anime {
   0% {
