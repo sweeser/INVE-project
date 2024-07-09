@@ -11,15 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <title>INVE</title>
 </head>
-<body>
+<body class="page">
   <header class="main-header">
     <img id="logo" src="./img/logo.png" alt="Logo-site">
     <h1>INVE STUDIOS</h1>
     <nav class="main-navigation">
-      <a href="#members">Members</a>
-      <a href="#discord">Discord</a>
-      <a href="#join-server">Join server</a>
+      <a class="main-navigation-item" href="#members">Members</a>
+      <a class="main-navigation-item" href="#discord">Discord</a>
+      <a class="main-navigation-item" href="#join-server">Join server</a>
     </nav>
+    <ul class="theme-switcher">
+      <li>
+          <button class="theme-button-dark" type="button"></button>
+      </li>
+      <li>
+          <button class="theme-button-light active" type="button"></button>
+      </li>
+  </ul>
   </header>
   <main>
     <h2 id="members" >Members</h2>
@@ -109,11 +117,12 @@
   </main>
   <footer class="main-footer">
     <ul class="footer-navigation">
-      <li><a href="https://t.me/Sweeser" target="_blank">Telegram</a></li>
-      <li><a href="https://vk.com/sweeser" target="_blank">Vkontakte</a></li>
-      <li><a href="https://discord.gg/x5asvPQR" target="_blank">Discord</a></li>
-      <li><a class="nav-button" href="#">Something</a></li>
+      <li><a class="footer-navigation-item" href="https://t.me/Sweeser" target="_blank">Telegram</a></li>
+      <li><a class="footer-navigation-item" href="https://vk.com/sweeser" target="_blank">Vkontakte</a></li>
+      <li><a class="footer-navigation-item" href="https://discord.gg/x5asvPQR" target="_blank">Discord</a></li>
+      <li><a class="footer-navigation-item" href="#">Something</a></li>
     </ul>
   </footer>
+  <script src="./script/app.js"></script>
 </body>
 </html>
