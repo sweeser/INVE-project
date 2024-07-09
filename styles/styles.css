@@ -2,7 +2,7 @@ html {
   font-family: Bebas Neue;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  scroll-padding-top: 170px;
+  scroll-padding-top: 150px;
   color: var(--text-color);
 }
 
@@ -23,7 +23,7 @@ html {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 150px;
+  height: 130px;
   padding: 15px 25px;
   box-sizing: border-box;
   background-color: var(--color-header);
@@ -153,10 +153,88 @@ h2 {
   margin-bottom: 15px;
 }
 
+.discord-join {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #000000;
+}
+
+.discord-join p {
+  text-align: center;
+  font-size: 25px;
+}
+
+.join-form {
+  font-size: 25px;
+  width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.text-field {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.text-field:last-child {
+  margin-bottom: 0;
+}
+
+.text-field__label {
+  display: block;
+}
+
+.text-field__input {
+  display: block;
+  width: 300px;
+  resize: none;
+}
+
+.form-buttons {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: #000000;
+  border-radius: 3px;
+  font-size: 20px;
+  padding: 2px;
+  box-sizing: border-box;
+  border: none; 
+  outline: none;
+  font-family: Bebas Neue;
+  font-size: 25px;
+}
+
+.form-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--underline-color);
+  text-underline-offset: 3px;
+  text-underline-position: under;
+  transition: text-decoration 1s 1s; /*Спросить у Артема как это работает  */
+  transition: text-decoration-color 1s;
+}
+
 .main-footer {
-  /* position: fixed;
-  bottom: 0;
-  z-index: 1000; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,7 +278,7 @@ h2 {
   }
 
   100% {
-    transform: translateX(-0%);
+    transform: translateX(0%);
     opacity: 1;
   }
 }

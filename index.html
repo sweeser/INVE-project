@@ -18,7 +18,7 @@
     <nav class="main-navigation">
       <a href="#members">Members</a>
       <a href="#discord">Discord</a>
-      <a href="#contacts">Join server</a>
+      <a href="#join-server">Join server</a>
     </nav>
   </header>
   <main>
@@ -80,7 +80,32 @@
         <li class="rule"><p>Using development channels for other purposes is undesirable, but like other rules, it is irrevocable. If you need your channel for a new project or its discussion, write to Vladyslav Sosedov in Discord or any other way you can</p></li>
       </ul>
     </section>
-    <h2 id="contacts">Join server</h2>
+    <h2 id="join-server">Join server</h2>
+    <section class="discord-join">
+      <p class="text">If you want to join our community, then leave a request</p>
+      <form class="join-form" action="https://sweeser.github.io/INVE-project/#" method="post">
+        <div class="text-field">
+          <label class="text-field__label" for="user-first-name">First Name:  </label>
+          <input class="text-field__input" type="text" name="first-name" id="user-first-name">
+        </div>
+        <div class="text-field">
+          <label class="text-field__label" for="user-last-name">Last Name: </label>
+          <input class="text-field__input" type="text" name="first-name" id="user-last-name">
+        </div>
+        <div class="text-field">
+          <label class="text-field__label" for="user-git-url">Your git url:</label>
+          <input class="text-field__input" type="url" name="git-url" id="user-git-url">
+        </div>
+        <div class="text-field">
+          <label class="text-field__label" for="comment">Tell us about yourself:</label>
+          <textarea class="text-field__input" name="comment" id="comment" rows="5" cols="30" resize="none"></textarea>
+        </div>
+        <div class="form-buttons">
+          <button class="form-button" type="button">Submit</button>
+          <button class="form-button" type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
   </main>
   <footer class="main-footer">
     <ul class="footer-navigation">
