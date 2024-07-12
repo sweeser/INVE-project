@@ -42,6 +42,7 @@ body {
 .main-header.dark {
   color: #fdfdff;
   background-color: black;
+  /* animation: theme-reveal 2s;  */ /* Доделать плавный переход */
 }
 
 #logo {
@@ -503,6 +504,16 @@ h2.dark {
 
   100% {
     transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes theme-reveal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
     opacity: 1;
   }
 }
