@@ -42,7 +42,7 @@ body {
 .main-header.dark {
   color: #fdfdff;
   background-color: black;
-  /* animation: theme-reveal 2s;  */ /* Доделать плавный переход */
+  animation: theme-reveal 2s;
 }
 
 #logo {
@@ -368,6 +368,7 @@ h2.dark {
   box-sizing: border-box;
   background-color: white;
   color: black;
+  animation: theme-reveal 2s;
 }
 
 .main-footer.dark {
